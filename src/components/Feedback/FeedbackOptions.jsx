@@ -1,14 +1,10 @@
 import css from './FeedbackOptions.module.css';
+import React, { Component } from 'react';
 
 class FeedbackOptions extends Component {
   static defaultProps = {
     options: [],
   };
-  static propTypes = {
-    options: PropTypes.array.isRequired,
-    onLeaveFeedback: PropTypes.func.isRequired,
-  };
-
   render() {
     return (
       <div className={css.feedback}>
