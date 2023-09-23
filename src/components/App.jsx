@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FeedbackOptions } from './Feedback/FeedbackOptions';
 import { Section } from './Section/Section.jsx';
 import { Notification } from './Notification/Notification.jsx';
+import { Statistics } from './Statistics/Statistics.jsx';
 
 export class App extends Component {
   constructor() {
