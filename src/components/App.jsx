@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions.jsx';
+import { Section } from './Section/Section.jsx';
 
 export class App extends Component {
   constructor() {
@@ -25,9 +26,6 @@ export class App extends Component {
   };
 
   render() {
-    const { good, neutral, bad } = this.state;
-    const total = this.countTotalFeedback();
-    const positiveFeedback = this.countPositiveFeedbackPercentage();
     return (
       <>
         <Section title="Please leave feedback">
@@ -35,17 +33,6 @@ export class App extends Component {
             options={this.state}
             onLeaveFeedback={this.handleLeaveFeedback}
           />
-          {total === 0 ? (
-            <Notification message="There is no feedback"></Notification>
-          ) : (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={total}
-              positivePercentage={positiveFeedback}
-            />
-          )}
         </Section>
       </>
     );

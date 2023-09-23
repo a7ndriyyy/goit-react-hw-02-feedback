@@ -1,14 +1,20 @@
-.feedback {
+.feedback__container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0 60px 0 60px;
+}
+.feedback__btn {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #f3f6f9;
+  color: #82909e;
+  transition: all 800ms;
 }
-.feedback__title {
-  font-size: 45px;
-  font-weight: 700;
-}
-.feedback_buttons {
-  padding: 5px 10px;
-  margin: 5px;
-  text-transform: capitalize;
+.feedback__btn:hover {
+  background-color: #4267b2;
+  color: white;
 }
