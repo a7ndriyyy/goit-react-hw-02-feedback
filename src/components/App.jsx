@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions.jsx';
+import { FeedbackOptions } from './Feedback/FeedbackOptions';
 import { Section } from './Section/Section.jsx';
+import { Notification } from './Notification/Notification.jsx';
 
 export class App extends Component {
   constructor() {
@@ -34,6 +35,17 @@ export class App extends Component {
             onLeaveFeedback={this.handleLeaveFeedback}
           />
         </Section>
+        {total === 0 ? (
+          <Notification message="There is no feedback"></Notification>
+        ) : (
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={total}
+            positivePercentage={positiveFeedback}
+          />
+        )}
       </>
     );
   }
