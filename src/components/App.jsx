@@ -28,6 +28,9 @@ export class App extends Component {
   };
 
   render() {
+    const { good, neutral, bad } = this.state;
+    const total = this.countTotalFeedback();
+    const positiveFeedback = this.countPositiveFeedbackPercentage();
     return (
       <>
         <Section title="Please leave feedback">
